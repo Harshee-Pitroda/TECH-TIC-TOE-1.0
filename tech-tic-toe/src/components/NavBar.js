@@ -32,7 +32,7 @@ const MenuBtn = styled.li`
 background-color: ${props => `rgba(${props.theme.textRgba},0.9)`};
 list-style-type: none;
 color: ${props => props.theme.body};
-width: 6rem;
+width: 10rem;
 height: 3.5rem;
 
 font-size: ${props => props.theme.fontlg} !important;
