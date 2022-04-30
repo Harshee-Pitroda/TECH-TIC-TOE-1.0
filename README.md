@@ -6,7 +6,7 @@
 
 
 <h3 align="center">SURE Trust TECH-TIC-TOE 1.0</h3>
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://tech-tic-toe-1-0.vercel.app/">Click here to View Demo</a>
 </div>
 
 
