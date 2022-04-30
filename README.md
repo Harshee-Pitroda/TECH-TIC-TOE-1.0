@@ -6,7 +6,7 @@
    <img src='https://user-images.githubusercontent.com/73131499/166115643-d3187f47-d38f-41b2-ae42-5ecbbc60de14.png' />
 
 
-<h3 align="center">project_title</h3>
+<h3 align="center">SURE Trust TECH-TIC-TOE 1.0</h3>
 
   <p align="center">
     project_description
