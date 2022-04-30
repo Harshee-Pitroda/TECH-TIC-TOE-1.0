@@ -4,12 +4,11 @@ import poster from '../assets/Images/abt.jpeg';
 
 const Section = styled.section`
   position: relative;
-  background-color: #3A6888;
+  background-color: #000001;
   min-height: 100vh;
   width: 80vw;
   overflow: hidden;
   display: flex;
-
   margin: 0 auto;
 `;
 const Title = styled.h1`
@@ -56,6 +55,11 @@ const About = () => {
         About Us
       </Title>
       <Left data-scroll data-scroll-speed="2" data-scroll-direction='horizontal'>
+      SURE Trust is an NGO that aims at enhancing the employability of educated 
+unemployed rural youth through value-based 
+skill upgradation in emerging technologies, 
+with no cost to students.
+        <br /> <br />
         SURE Trust TECH-TIC-TOE 1.0 intends to bring together educators,
         trainers, researchers, professionals, and students in order to inspire
         and disseminate knowledge amongst all.
@@ -63,8 +67,6 @@ const About = () => {
         We at SURE Trust will host a variety of diverse events, ranging from
         meet-ups, technical events, industrial visits and hackathons, to various
         non technical and fun-related activities, as part of this festival.
-        <br /> <br />
-        We hope you have an amazing and memorable time here in this festival.
       </Left>
       <Right>
           <img
