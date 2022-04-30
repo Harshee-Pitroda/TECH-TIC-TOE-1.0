@@ -76,7 +76,7 @@ justify-content: center;
 align-items: center;
 color: ${props => props.theme.text};
 
-@media (max-width: 88em) {
+@media (max-width: 78em) {
     top: 0;
 }
 
