@@ -51,10 +51,4 @@ The build is minified and the filenames include the hashes.\
 This app is ready to be deployed!
 
 
-<!-- SCREENSHOTS -->
-## Demonstration
-
-
-https://user-images.githubusercontent.com/73131499/166117137-319bf994-49b1-4637-af42-a8849f447db5.mp4
-
 
