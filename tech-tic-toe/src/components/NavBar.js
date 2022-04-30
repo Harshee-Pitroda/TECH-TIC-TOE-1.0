@@ -11,6 +11,10 @@ transition: all 0.3s ease;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 40em) {
+    top: ${props => props.click ? '0' : `calc(-50vh - 4rem)`};
+}
 `
 
 const MenuItems = styled(motion.ul)`
@@ -26,6 +30,12 @@ align-items: center;
 
 width: 100%;
 padding: 0 10rem;
+
+@media (max-width: 40em) {
+    flex-direction: column;
+    padding: 2rem 0;
+    height: 50vh;
+}
 `
 
 const MenuBtn = styled.li`
@@ -52,16 +62,38 @@ font-weight: 600;
 text-transform: uppercase;
 
 cursor: pointer;
+
+@media (max-width: 40em) {
+    width: 10rem;
+    height: 2rem;
+}
 `
 
-const MenuItem = styled(motion.li)`
+const MenuItem = styled.li`
 text-transform: uppercase;
 cursor: pointer;
 color: ${props => props.theme.text};
+
+@media (max-width: 40em) {
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
 `
 
 const NavBar = () => {
     const [click,setClick] = useState(false);
+    const [click2, setclick2] = useState(false);
+
+    const scrollTo = (id) => {
+        let element = document.getElementById(id);
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        })
+        setclick2(!click2);
+      }
+
   return (
     <NavContainer click={click}
     initial={{
@@ -83,24 +115,28 @@ const NavBar = () => {
         }}
         dragElastic={0.05}
         dragSnapToOrigin
+        click={click2}
         >
         <MenuBtn onClick={() => setClick(!click)}>Menu</MenuBtn>
         <MenuItem
         whileHover={{scale: 1.1, y: -5}}
         whileTap={{scale: 0.09, y:0}}
+        onClick={() => scrollTo('home')}
         >Home</MenuItem>
         <MenuItem
         whileHover={{scale: 1.1, y: -5}}
         whileTap={{scale: 0.09, y:0}}
+        onClick={() => scrollTo('about')}
         >About Us</MenuItem>
         <MenuItem
         whileHover={{scale: 1.1, y: -5}}
         whileTap={{scale: 0.09, y:0}}
+        onClick={() => scrollTo('events')}
         >Events</MenuItem>
         <MenuItem
         whileHover={{scale: 1.1, y: -5}}
         whileTap={{scale: 0.09, y:0}}
-        >Our Team</MenuItem>
+        >Brochure of the event</MenuItem>
         </MenuItems>
     </NavContainer>
   )

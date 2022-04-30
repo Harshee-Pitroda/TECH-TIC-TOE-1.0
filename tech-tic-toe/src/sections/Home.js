@@ -12,7 +12,7 @@ overflow: hidden;
 
 export const Home = () => {
   return (
-    <Section>
+    <Section id="home">
         <CoverVideo />
         <Logo />
         <NavBar />

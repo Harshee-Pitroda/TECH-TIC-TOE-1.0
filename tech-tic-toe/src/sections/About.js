@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import poster from '../assets/Images/abt.jpeg';
+import { motion } from "framer-motion";
 
 const Section = styled.section`
   position: relative;
-  background-color: #000001;
+  background-color: #B21835;
   min-height: 100vh;
-  width: 80vw;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   margin: 0 auto;
 `;
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-family: "Kaushan Script";
   font-size: ${(props) => props.theme.fontBig};
   font-weight: 300;
@@ -21,8 +22,20 @@ const Title = styled.h1`
   top: 1rem;
   left: 5%;
   z-index: 5;
+
+  @media (max-width: 88em) {
+    font-size: calc(4rem + 4vw);
+}
+@media (max-width: 48em) {
+    font-size: calc(3rem + 3vw);
+}
+@media (max-width: 21em) {
+    font-size: calc(2rem + 2vw);
+    margin-top: -10%;
+}
 `;
-const Left = styled.div`
+
+const Left = styled(motion.div)`
   width: 50%;
   font-size: ${(props) => props.theme.fontlg};
   color: ${(props) => props.theme.text};
@@ -31,6 +44,46 @@ const Left = styled.div`
   position: relative;
   z-index: 5;
   margin-top: 20%;
+  margin-left: 2%;
+
+  @media (max-width: 57em){
+    width: 80%;
+    position: absolute;
+  font-size: ${(props) => props.theme.fontxl};
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0;
+    padding: 2rem;
+    font-weight: 600;
+
+    backdrop-filter: blur(2px);
+    background-color: ${props => `rgba(${props.theme.textRgba},0.4)`};
+    border-radius: 20px;
+
+
+  }
+  @media (max-width: 48em){
+    width: 80%;
+    position: absolute;
+  font-size: ${(props) => props.theme.fontlg};
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin:0;
+    padding: 2rem;
+    font-weight: 600;
+
+    backdrop-filter: blur(2px);
+    background-color: ${props => `rgba(${props.theme.textRgba},0.4)`};
+    border-radius: 20px;
+
+  }
+
+  @media (max-width: 25rem){
+  font-size: ${(props) => props.theme.fontmd};
+  }
+
 `;
 const Right = styled.div`
   width: 50%;
@@ -41,20 +94,34 @@ const Right = styled.div`
       position: absolute;
       height: auto;
       left: 60%;
+      
+  @media (max-width: 57em){
+    display: none;
+  }
   }
 `;
 
 const About = () => {
   return (
-    <Section id='fixed-target'>
+    <Section id='about'>
       <Title
-        data-scroll
-        data-scroll-speed="-2"
-        data-scroll-direction="horizontal"
+                      initial={{ x: "-70px" }}
+                      whileInView={{ x: 0 }}
+                      viewport={{ once: false }}
+                      transition={{
+                        duration: 1.5,
+                      }}
       >
         About Us
       </Title>
-      <Left data-scroll data-scroll-speed="2" data-scroll-direction='horizontal'>
+      <Left 
+                            initial={{ x: "70px" }}
+                            whileInView={{ x: 10 }}
+                            viewport={{ once: false }}
+                            transition={{
+                              duration: 1.5,
+                            }}
+      >
       SURE Trust is an NGO that aims at enhancing the employability of educated 
 unemployed rural youth through value-based 
 skill upgradation in emerging technologies, 
@@ -69,8 +136,13 @@ with no cost to students.
         non technical and fun-related activities, as part of this festival.
       </Left>
       <Right>
-          <img
-          data-scroll data-scroll-speed="5"
+          <motion.img
+        initial={{opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{
+          duration: 1.5,
+        }}
             src={poster} alt="about us" />
       </Right>
     </Section>
