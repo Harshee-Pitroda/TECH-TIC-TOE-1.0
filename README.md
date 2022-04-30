@@ -1,10 +1,9 @@
 <div id="top"></div>
 <!-- PROJECT LOGO -->
 <br />
+
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+    ![logo](https://user-images.githubusercontent.com/73131499/166115624-9fc0a2ff-3c96-40f2-985b-a3e3aa608080.png)
 
 <h3 align="center">project_title</h3>
 
