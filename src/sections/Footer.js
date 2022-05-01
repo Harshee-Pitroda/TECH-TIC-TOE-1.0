@@ -5,6 +5,7 @@ import logo from "../assets/Images/logo.png";
 
 const Section = styled.section`
   position: relative;
+  background-color: #829CD4;
   min-height: 100vh;
   width: 80vw;
   display: flex;

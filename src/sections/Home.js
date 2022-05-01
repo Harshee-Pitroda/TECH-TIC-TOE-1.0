@@ -1,6 +1,7 @@
 import React from 'react'
 import styled  from "styled-components";
-import CoverVideo from '../components/CoverVideo';
+// import CoverVideo from '../components/CoverVideo';
+import HeroSection from '../components/Hero';
 import { Logo } from '../components/Logo';
 import NavBar from '../components/NavBar';
 
@@ -13,7 +14,7 @@ overflow: hidden;
 export const Home = () => {
   return (
     <Section id="home">
-        <CoverVideo />
+        <HeroSection />
         <Logo />
         <NavBar />
     </Section>

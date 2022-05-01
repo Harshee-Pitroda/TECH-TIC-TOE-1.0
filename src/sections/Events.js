@@ -12,8 +12,11 @@ import img8 from "../assets/Images/8.png";
 import img9 from "../assets/Images/9.png";
 import img10 from "../assets/Images/10.png";
 import img11 from "../assets/Images/11.png";
+import wave from "../assets/waves2.svg";
+
 
 const Section = styled.section`
+  background-color: #FFBCBC;
   position: relative;
   min-height: 100vh;
   width: 100vw;
@@ -119,15 +122,22 @@ const EventComponent = ({ img, name = " ", type=" ", description = " ", reg = " 
   );
 };
 
+const Waves = styled.img`
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -1rem;
+`;
+
 const Title = styled.h1`
   font-family: "Kaushan Script";
   font-size: ${(props) => props.theme.fontBig};
   font-weight: 300;
-  color: ${(props) => props.theme.text};
+  color: #000001;
 
   position: absolute;
-  top: 1rem;
-  left: 30%;
+  top: 5rem;
+  left: 35%;
   z-index: 5;
 
   @media (max-width: 88em) {
@@ -145,11 +155,8 @@ const Title = styled.h1`
 const Events = () => {
   return (
     <Section id="events">
-      <Title
-        data-scroll
-        data-scroll-speed="-2"
-        data-scroll-direction="horizontal"
-      >
+      <Waves src={wave} alt="" />
+      <Title>
         Events
       </Title>
       <Container>
