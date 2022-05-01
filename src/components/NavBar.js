@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 
 const NavContainer = styled(motion.div)`
 width: 100vw;
-z-index: 10;
+z-index: 20;
 position: absolute;
 top: ${props => props.click ? '0' : `-${props.theme.navHeight}`};
 transition: all 0.3s ease;
