@@ -6,7 +6,7 @@
 
 
 <h3 align="center">SURE Trust TECH-TIC-TOE 1.0</h3>
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://tech-tic-toe-1-0.vercel.app/">Click here to View Demo</a>
 </div>
 
 
@@ -50,11 +50,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 This app is ready to be deployed!
 
-
-<!-- SCREENSHOTS -->
-## Demonstration
-
-
-https://user-images.githubusercontent.com/73131499/166117137-319bf994-49b1-4637-af42-a8849f447db5.mp4
 
 
