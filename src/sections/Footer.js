@@ -109,6 +109,7 @@ const Footer = () => {
           <li onClick={() => scrollTo('home')} >home</li>
           <li onClick={() => scrollTo('about')}>about</li>
           <li onClick={() => scrollTo('events')} >events</li>
+          <li onClick={() => scrollTo('team')} >Team</li>
           <li onClick={() => scrollTo('home')} >Brochure of the event</li>
           <li>
             <a

@@ -136,6 +136,11 @@ const NavBar = () => {
         <MenuItem
         whileHover={{scale: 1.1, y: -5}}
         whileTap={{scale: 0.09, y:0}}
+        onClick={() => scrollTo('team')}
+        >Team</MenuItem>
+        <MenuItem
+        whileHover={{scale: 1.1, y: -5}}
+        whileTap={{scale: 0.09, y:0}}
         >Brochure of the event</MenuItem>
         </MenuItems>
     </NavContainer>

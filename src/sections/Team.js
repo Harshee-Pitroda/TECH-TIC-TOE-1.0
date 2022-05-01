@@ -97,7 +97,7 @@ const Description = styled.h2`
 
 const Team = () => {
   return (
-    <AboutSection>
+    <AboutSection id="team">
       <Waves src={wave} alt="" />
     <Title> Our Team </Title>
     <Container>
@@ -126,7 +126,7 @@ const Team = () => {
         <Name>Organizing Committee</Name>
         <Description>
             <ul>
-                <li><b>Harshee Pitroda</b> - Lead Co-ordinator</li>
+                <li><b>Harshee Pitroda</b> - Event Incharge and Co-ordinator</li>
                 <li>Other head of departments to be announced soon !</li>
             </ul>
         </Description>
