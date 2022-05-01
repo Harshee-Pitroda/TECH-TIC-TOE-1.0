@@ -14,6 +14,7 @@ export const dark = {
     fontxl: "2em",
     fontxxl: "3em",
     fontxxxl: "5em",
+    fontbb: "7em",
     fontBig: "10em",
     navHeight: "5rem"
 }

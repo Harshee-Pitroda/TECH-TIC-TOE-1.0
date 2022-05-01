@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "./sections/About2";
 import Events from "./sections/Events";
 import Footer from "./sections/Footer";
+import Team from "./sections/Team";
 
 function App() {
   const containerRef = useRef(null);
@@ -21,6 +22,7 @@ function App() {
             <Home />
             <About />
             <Events />
+            <Team />
             <Footer />
           </main>
           </AnimatePresence>

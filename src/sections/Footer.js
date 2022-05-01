@@ -7,7 +7,7 @@ const Section = styled.section`
   position: relative;
   color: #000001;
   background-color: #FEA65C;
-  min-height: 100vh;
+  min-height: 60vh;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -101,14 +101,7 @@ const Footer = () => {
       <LogoContainer>
         <img src={logo} alt="logo" />
       </LogoContainer>
-      <FooterComponent
-        initial={{ y: "-400px" }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: false }}
-        transition={{
-          duration: 1.5,
-        }}
-      >
+      <FooterComponent>
         <Title>
             Contact Us: 9440045717 / 9137093968
           </Title>
