@@ -145,6 +145,8 @@ const Title = styled.h1`
 }
 @media (max-width: 48em) {
     font-size: calc(3rem + 3vw);
+    top: 0rem;
+    z-index: 5;
 }
 @media (max-width: 21em) {
     font-size: calc(2rem + 2vw);

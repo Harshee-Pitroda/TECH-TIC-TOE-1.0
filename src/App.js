@@ -16,7 +16,7 @@ function App() {
       <ThemeProvider theme={dark}>
           <AnimatePresence>
           <main data-scroll-container ref={containerRef}
-          style={{backgroundColor: '#829CD4'}}
+          style={{backgroundColor: '#FEA65C'}}
           >
             <Home />
             <About />

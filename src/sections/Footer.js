@@ -5,14 +5,14 @@ import logo from "../assets/Images/logo.png";
 
 const Section = styled.section`
   position: relative;
-  background-color: #829CD4;
+  color: #000001;
+  background-color: #FEA65C;
   min-height: 100vh;
   width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5rem auto;
-  color: ${(props) => props.theme.text};
 `;
 
 const LogoContainer = styled.div`
@@ -38,8 +38,8 @@ const FooterComponent = styled(motion.footer)`
     margin: 2rem;
     margin-top: 4rem;
     padding: 0 1rem;
-    border-top: 1px solid ${(props) => props.theme.text};
-    border-bottom: 1px solid ${(props) => props.theme.text};
+    border-top: 1px solid #000001;
+    border-bottom: 1px solid #000001;
   }
 
   li {
@@ -64,6 +64,7 @@ const Bottom = styled.div`
   justify-content: space-between;
   align-items: center;
   a {
+    color: #000001;
     text-decoration: underline;
   }
 
@@ -73,6 +74,14 @@ const Bottom = styled.div`
       margin: 1rem;
     }
 }
+`;
+
+const Title = styled.h1`
+color: #000001;
+text-align: center;
+  font-size: calc(1rem + 1vw);
+  line-height: 1.2;
+  padding: 0.5rem 0;
 `;
 
 const Footer = () => {
@@ -100,6 +109,9 @@ const Footer = () => {
           duration: 1.5,
         }}
       >
+        <Title>
+            Contact Us: 9440045717 / 9137093968
+          </Title>
         <ul click={click}>
           <li onClick={() => scrollTo('home')} >home</li>
           <li onClick={() => scrollTo('about')}>about</li>
@@ -118,15 +130,7 @@ const Footer = () => {
         <Bottom>
           <span
           >
-            Illustration by Icons 8 from Ouch!
-          </span>
-          <span
-          >
-            For any queries contact: 9440045717 / 9137093968
-          </span>
-          <span
-          >
-            Website made by &nbsp;{" "}
+            Website created by &nbsp;{" "}
             <a
               href="https://www.linkedin.com/in/harshee-pitroda-790778212/"
               target="_blank"
@@ -135,6 +139,10 @@ const Footer = () => {
               {" "}
               Harshee Pitroda{" "}
             </a>
+          </span>
+          <span
+          >
+            Illustration by Icons 8 from Ouch and Dribbble!
           </span>
         </Bottom>
       </FooterComponent>
