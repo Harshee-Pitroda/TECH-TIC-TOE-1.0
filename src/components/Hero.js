@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import Mobile from "../assets/first.gif";
+import Mobile from "../assets/first3.gif";
 
 const move = keyframes`
 0% { transform: translateY(-5px)  }
@@ -10,8 +10,8 @@ const move = keyframes`
 const HomeSection = styled.section`
 width: 100%;
 height: 100vh;
-  background-color: #B59AF6;
-  display: flex;
+background-image: linear-gradient(to bottom, #bfabe1, #bcaee2, #b9b0e3, #b6b3e3, #b4b5e3, #b0b9e6, #adbce8, #aac0ea, #a4c6ed, #9fccf0, #9bd2f0, #99d7f0);
+display: flex;
   justify-content: center;
   position: relative;
 `;
@@ -52,10 +52,9 @@ const Lb = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
-  color: #fff;
+  color: #35353F;
   position: relative;
   font-family: 'Kaushan Script';
-  text-shadow: 10px 10px 15px #35353F;
   z-index: 15;
   @media only Screen and (max-width: 48em) {
     width: 80%;
@@ -70,37 +69,32 @@ const Lb = styled.div`
   }
 `;
 
-const Topic = styled.span`
-  display: flex;
-  margin-left: 5%;
-  font-family: 'Sirin Stencil';
-  align-items: center;
-  justify-content: center;
-  background-color: #35353F;
-  color: #fff;
-  font-size: calc(0.7rem + 0.4vw);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-`;
-
-const Circle = styled.span`
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #803BEC;
-  margin-right: 0.5rem;
-`;
-
-const Title = styled.h1`
-  font-size: calc(3rem + 1vw);
-  line-height: 1.2;
-  padding: 0.5rem 0;
-`;
+const GameContainer = styled.div`
+margin: 0 auto;
+display: grid;
+grid-template-columns: 33% 33% 33%;
+grid-template-rows: 33% 33% 33%;
+max-width: 300px;
+background-color: #000001;
+color: #fff;
+`
+const Cell = styled.div`
+background-color: #000001;
+font-family: 'Kaushan Script';
+text-align: center;
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${(props) => props.theme.fontxl};
+    cursor: pointer;
+`
 
 const Title2 = styled.h1`
-  font-size: calc(3rem + 1vw);
-  margin-left: 15%;
+color: #000001;
+  font-size: calc(5.5rem + 1vw);
   line-height: 1.2;
   padding: 0.5rem 0;
 `;
@@ -111,22 +105,17 @@ const HeroSection = () => {
       <MainContent id="home">
         <Lb id="leftBlock">
           <Title2>SURE Trust</Title2>
-          <Title>TECH-TIC-TOE 1.0</Title>
-          <br />
-          <Topic>
-            <Circle />
-            <span>Participate in various competitions to win exciting rewards!</span>
-          </Topic>
-          <br />
-          <Topic>
-            <Circle />
-            <span>Learn a ton of skills with the best events and competitions!</span>
-          </Topic>
-          <br />
-          <Topic>
-            <Circle />
-            <span>All work and enjoyment at one place - Join us at this fest !</span>
-          </Topic>
+          <GameContainer>
+            <Cell>TECH</Cell>
+            <Cell></Cell>
+            <Cell></Cell>
+            <Cell></Cell>
+            <Cell>TIC</Cell>
+            <Cell></Cell>
+            <Cell></Cell>
+            <Cell></Cell>
+            <Cell>TOE</Cell>
+          </GameContainer>
         </Lb>
 
         <MobileSvg
