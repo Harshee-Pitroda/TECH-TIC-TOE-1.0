@@ -92,7 +92,22 @@ const Description = styled.h2`
   font-weight: 400;
 `;
 
-const EventComponent = ({ img, name = " ", type=" ", description = " ", reg = " " }) => {
+export const NavBtnLink = styled.button`
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  margin-left: 40%;
+  margin-top: 7px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: ${(props) => props.theme.fontmd};
+  font-family: Sirin Stencil;
+  text-decoration: none;
+`;
+
+const EventComponent = ({ img, name = " ", type=" ", part =" ", description = " ", reg = " ", address = ' ' }) => {
   return (
     <Item>
       <ImageContainer>
@@ -110,14 +125,36 @@ const EventComponent = ({ img, name = " ", type=" ", description = " ", reg = " 
     }}
       >{name}</NameM>
       <Name
-      style={{color: '#F6F703'}}
+      style={{color: '#F6F703',margin: '0'}}
       >Type of event: {type}</Name>
       <br />
+      <Name
+      style={{color: '#fff', margin: '0'}}
+      >Participation: {part}</Name>
+      <br />
       <Description
+      style = {{margin: '0'}}
       >{description}</Description>
       <Name
       style={{color: '#00F73E'}}
-      >Registeration Link: {reg}</Name>
+      >
+              <a
+              href={address}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {reg}
+            </a>
+      </Name>
+      <NavBtnLink>
+      <a
+              href="https://suretrustforruralyouth.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Register
+            </a>
+      </NavBtnLink>
     </Item>
   );
 };
@@ -166,61 +203,68 @@ const Events = () => {
           img={img1}
           name="Lakshya"
           type="Technical"
+          part="Individual"
           description="The participants have to diagnose a 
-problem on their own, further, they have to identify the best opportunities 
+societal problem on their own, further, they have to identify 
 and ideate the most viable solution. They will not be required to code their 
 prototype; they just have to present their unique solution to the societal 
-problem they diagnosed through a PPT presentation."
-          reg="Will be shared soon"
+problem they diagnosed through a PPT presentation.The ppt presentation must include 3-15 slides. The best idea will be awarded and participation certificates will be given to all."
+          reg=""
         />
         <EventComponent
           img={img2}
           name="Techwik Quest"
           type='Technical'
+          part='TEAM SIZE - 3 members (if you do not have a group we will give you a group.)'
           description="This is a technical quiz containing 2 rounds. Each 
 of the rounds will contain technical questions with a specific time limit to solve them. 
-After the completion of round 1 the top competitors will be taken for the next round 
+After the completion of round 1 the top competiting teams will be taken for the next round 
 - round 2. After the round 2 the winners will be declared based on their scores 
 obtained and participation certificates will be awarded to all the participants."
-          reg="Will be shared soon"
+          reg=""
         />
         <EventComponent
           img={img3}
           type="Technical"
           name="Industrial Visits"
+          part="Individual"
           description="SURE Trust will organize virtual industry visits, which is a virtual tour that 
 students take into various companies and industrial plants to learn about 
 the procedures and work that takes place there. These visits are 
 instructive for students interested in pursuing careers in fundamental 
 fields and provide them a peek of what lies ahead. The details of the industrial visit will be revealed soon"
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img4}
           name="SURE-A-THON"
+          address='https://suretrustforruralyouth.com'
+          part='TEAM SIZE - 3 members (if you do not have a group we will give you a group.)'
           type="Technical"
           description="The Multi-Domain SURE-A-THON is a way for tech enthusiasts and 
 students to interact and learn from one another. In a nutshell, it's a 
 hackathon, organised in a structured way with the purpose to propose 
 solutions to pressing societal problems."
-          reg="Will be shared soon"
+          reg="Click Here to view the rules and regulations"
         />
         <EventComponent
           img={img5}
           name="Kala-Kriti"
           type="Non Technical"
+          part="Individual"
           description=" Kala-Kriti art competition is open to art lovers where the 
           participants need to choose a specific theme from the given themes and 
           can draw/paint in a given time frame. The participants can present their 
           art work to the jury and they would assess the work and declare winners. 
-          Participation certificates would be given to all participants."
-          reg="Will be shared soon"
+          Participation certificates would be given to all participants. Themes for the competition will be released at the start of the competition.
+          Participants need to complete their art work in the given time frame and submit their work
+          "
         />
         <EventComponent
           img={img6}
           name="Digi-Vigyapan"
           type="Non Technical"
-          description="Digi-Vigyapan is an ad making competition. Participants 
+          part="Individual"
+          description="Digi-Vigyapan is an advertisement making competition. Participants 
           must create advertisements, which might be in the form of video 
           advertising, pamphlets, brochures, or posters. The topics will be 
           announced, and participants need to select their preferred topic. The 
@@ -228,12 +272,12 @@ solutions to pressing societal problems."
           then present the ad to the jury who would assess their work and declare 
           the winners. Participation certificates would be given to all participants.
           "
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img7}
           name="Open-Mic"
           type="Non Technical"
+          part="Individual"
           description="Open-Mic is an event where participants may show off their 
           skills. Participants can sing, present a Shayri/poem, monologue, mimicry
           or show their creative side. Initially, a Google form will be shared where 
@@ -241,47 +285,47 @@ solutions to pressing societal problems."
           will be judged by a jury. Participation certificates would be given to all 
           participants.
           "
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img8}
           name="Fun-a-Thon"
           type="Entertrainment"
+          part="Individual"
           description="Fun-a-Thon is a guessing game in which players must guess 
           the movie, series, cartoon, conversation, brand and so on that will be 
           delivered to them in gibberish, Emojis, or any other format. Teams must 
           guess the answers and will be awarded points depending on their 
           guesses. The team with the most points will be declared the winner. 
           Everyone will get a certificate of participation"
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img9}
           name="Zeal-a-Wheel"
           type="Entertrainment"
+          part="Individual"
           description="Zeal-a-Wheel is an individual gaming activity in which the 
           organising team will virtually spin a wheel with a variety of fun-filled 
           games and tasks for each player. For the participants, this event will be entertaining, 
           challenging, and gratifying.
           "
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img10}
           name="Magifun-Magnified"
           type="Entertrainment"
+          part="Individual"
           description=" Magifun-Magnified is a two-round random object or sound 
           evaluating game in which a little portion of an image is magnified on the 
           screen in the first round. Participants must identify the object in the image. The second round will be a sound gauging 
           game, in which the participants will hear a random noise, and they must identify the activity underlying 
           that sound.
           "
-          reg="Will be shared soon"
         />
         <EventComponent
           img={img11}
           name="Tambola"
           type="Entertrainment"
+          part="Individual"
           description="Tambola/Housie is a fun game in which the players receive 
           their game tickets prior to the game. The rules, regulations, and prizes 
           will be announced. The numbers will be announced virtually by the host, 
@@ -289,7 +333,6 @@ solutions to pressing societal problems."
           called. A player wins if they can mark off all the numbers on their ticket 
           first.
           "
-          reg="Will be shared soon"
         />
       </Container>
     </Section>

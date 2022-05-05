@@ -34,7 +34,7 @@ const Waves = styled.img`
 const AboutSection = styled.section`
   background-color: #966750;
   width: 100vw;
-  height: 120vh;
+  min-height: 120vh;
   position: relative;
   display: flex;
   flex-direction: column;
