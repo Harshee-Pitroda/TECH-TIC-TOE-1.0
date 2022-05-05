@@ -1,0 +1,13 @@
+.pdfWrapper{
+    width: 100%;
+  }
+
+.ant-modal-content{
+  margin-left: -94px;
+    margin-right: -38px;
+}
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }

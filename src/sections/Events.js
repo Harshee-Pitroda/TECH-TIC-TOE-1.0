@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import img1 from "../assets/Images/1.png";
@@ -13,6 +13,9 @@ import img9 from "../assets/Images/9.png";
 import img10 from "../assets/Images/10.png";
 import img11 from "../assets/Images/11.png";
 import wave from "../assets/waves2.svg";
+import {Button} from 'antd';
+import pdf from '../assets/hackathon.pdf'
+import PdfViewer from "../components/PdfViewer";
 
 
 const Section = styled.section`
@@ -108,6 +111,7 @@ export const NavBtnLink = styled.button`
 `;
 
 const EventComponent = ({ img, name = " ", type=" ", part =" ", description = " ", reg = " ", address = ' ' }) => {
+  const [showPdf, setShowPdf] = useState(false)
   return (
     <Item>
       <ImageContainer>
@@ -138,23 +142,22 @@ const EventComponent = ({ img, name = " ", type=" ", part =" ", description = " 
       <Name
       style={{color: '#00F73E'}}
       >
-              <a
-              href={address}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {reg}
-            </a>
+        <PdfViewer pdf={pdf}
+                 onCancel={()=>setShowPdf(false)}
+                 visible={showPdf}
+      />
+      <Button onClick={()=>setShowPdf(!showPdf)}>{reg}</Button>
       </Name>
-      <NavBtnLink>
+      
       <a
               href="https://suretrustforruralyouth.com"
               target="_blank"
               rel="noreferrer"
             >
+              <NavBtnLink>
               Register
+              </NavBtnLink>
             </a>
-      </NavBtnLink>
     </Item>
   );
 };
@@ -228,6 +231,7 @@ obtained and participation certificates will be awarded to all the participants.
           type="Technical"
           name="Industrial Visits"
           part="Individual"
+          reg=""
           description="SURE Trust will organize virtual industry visits, which is a virtual tour that 
 students take into various companies and industrial plants to learn about 
 the procedures and work that takes place there. These visits are 
@@ -250,6 +254,7 @@ solutions to pressing societal problems."
           img={img5}
           name="Kala-Kriti"
           type="Non Technical"
+          reg=""
           part="Individual"
           description=" Kala-Kriti art competition is open to art lovers where the 
           participants need to choose a specific theme from the given themes and 
@@ -264,6 +269,7 @@ solutions to pressing societal problems."
           name="Digi-Vigyapan"
           type="Non Technical"
           part="Individual"
+          reg=""
           description="Digi-Vigyapan is an advertisement making competition. Participants 
           must create advertisements, which might be in the form of video 
           advertising, pamphlets, brochures, or posters. The topics will be 
@@ -278,6 +284,7 @@ solutions to pressing societal problems."
           name="Open-Mic"
           type="Non Technical"
           part="Individual"
+          reg=""
           description="Open-Mic is an event where participants may show off their 
           skills. Participants can sing, present a Shayri/poem, monologue, mimicry
           or show their creative side. Initially, a Google form will be shared where 
@@ -290,6 +297,7 @@ solutions to pressing societal problems."
           img={img8}
           name="Fun-a-Thon"
           type="Entertrainment"
+          reg=""
           part="Individual"
           description="Fun-a-Thon is a guessing game in which players must guess 
           the movie, series, cartoon, conversation, brand and so on that will be 
@@ -301,6 +309,7 @@ solutions to pressing societal problems."
         <EventComponent
           img={img9}
           name="Zeal-a-Wheel"
+          reg=""
           type="Entertrainment"
           part="Individual"
           description="Zeal-a-Wheel is an individual gaming activity in which the 
@@ -312,6 +321,7 @@ solutions to pressing societal problems."
         <EventComponent
           img={img10}
           name="Magifun-Magnified"
+          reg=""
           type="Entertrainment"
           part="Individual"
           description=" Magifun-Magnified is a two-round random object or sound 
@@ -333,6 +343,7 @@ solutions to pressing societal problems."
           called. A player wins if they can mark off all the numbers on their ticket 
           first.
           "
+          reg=""
         />
       </Container>
     </Section>
