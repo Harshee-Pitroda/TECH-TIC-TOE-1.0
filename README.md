@@ -29,6 +29,7 @@ This project is solely developed by me:
 * [Framer Motions](https://www.framer.com/motion/)
 * [Font Source](https://fontsource.org/)
 * [Deployment: Vercel](https://www.vercel.com/)
+* [Ant Design](https://ant.design/)
 
 
 ## Installation
