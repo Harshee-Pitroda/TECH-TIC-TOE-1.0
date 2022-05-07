@@ -150,7 +150,7 @@ const EventComponent = ({ img, name = " ", type=" ", part =" ", description = " 
       </Name>
       
       <a
-              href="https://suretrustforruralyouth.com"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScSlBqzAgLuzelz1z3ZkGWu6NtQ_SmUiD2eAf-poVQdTVRN6A/viewform?usp=sf_link"
               target="_blank"
               rel="noreferrer"
             >
