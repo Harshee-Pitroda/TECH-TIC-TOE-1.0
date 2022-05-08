@@ -242,7 +242,7 @@ fields and provide them a peek of what lies ahead. The details of the industrial
           img={img4}
           name="SURE-A-THON"
           address='https://suretrustforruralyouth.com'
-          part='TEAM SIZE - 3 members (if you do not have a group we will give you a group.)'
+          part='2 members to 4 members'
           type="Technical"
           description="The Multi-Domain SURE-A-THON is a way for tech enthusiasts and 
 students to interact and learn from one another. In a nutshell, it's a 
