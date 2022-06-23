@@ -203,22 +203,10 @@ const Events = () => {
       </Title>
       <Container>
         <EventComponent
-          img={img1}
-          name="Lakshya"
-          type="Technical"
-          part="Individual"
-          description="The participants have to diagnose a 
-societal problem on their own, further, they have to identify 
-and ideate the most viable solution. They will not be required to code their 
-prototype; they just have to present their unique solution to the societal 
-problem they diagnosed through a PPT presentation.The ppt presentation must include 3-15 slides. The best idea will be awarded and participation certificates will be given to all."
-          reg=""
-        />
-        <EventComponent
           img={img2}
           name="Techwik Quest"
           type='Technical'
-          part='TEAM SIZE - 3 members (if you do not have a group we will give you a group.)'
+          part='Individual'
           description="This is a technical quiz containing 2 rounds. Each 
 of the rounds will contain technical questions with a specific time limit to solve them. 
 After the completion of round 1 the top competiting teams will be taken for the next round 
@@ -229,55 +217,22 @@ obtained and participation certificates will be awarded to all the participants.
         <EventComponent
           img={img3}
           type="Technical"
-          name="Industrial Visits"
+          name="Industrial Quiz"
           part="Individual"
           reg=""
-          description="SURE Trust will organize virtual industry visits, which is a virtual tour that 
-students take into various companies and industrial plants to learn about 
-the procedures and work that takes place there. These visits are 
-instructive for students interested in pursuing careers in fundamental 
-fields and provide them a peek of what lies ahead. The details of the industrial visit will be revealed soon"
+          description="SURE Trust will host an Industry Quiz which is about the workings of the industry catering to manufacturing, operations, or services. Solving these quizzes may benefit you a lot as you will learn the details of industry working. The quiz also includes questions about the fourth industrial revolution, technology, and its advancements."
         />
         <EventComponent
           img={img4}
-          name="SURE-A-THON"
+          name="IDEA-THON"
           address='https://suretrustforruralyouth.com'
           part='2 members to 4 members'
           type="Technical"
-          description="The Multi-Domain SURE-A-THON is a way for tech enthusiasts and 
+          description="The Multi-Domain IDEA-THON is a way for tech enthusiasts and 
 students to interact and learn from one another. In a nutshell, it's a 
 hackathon, organised in a structured way with the purpose to propose 
 solutions to pressing societal problems."
           reg="Click Here to view the rules and regulations"
-        />
-        <EventComponent
-          img={img5}
-          name="Kala-Kriti"
-          type="Non Technical"
-          reg=""
-          part="Individual"
-          description=" Kala-Kriti art competition is open to art lovers where the 
-          participants need to choose a specific theme from the given themes and 
-          can draw/paint in a given time frame. The participants can present their 
-          art work to the jury and they would assess the work and declare winners. 
-          Participation certificates would be given to all participants. Themes for the competition will be released at the start of the competition.
-          Participants need to complete their art work in the given time frame and submit their work
-          "
-        />
-        <EventComponent
-          img={img6}
-          name="Digi-Vigyapan"
-          type="Non Technical"
-          part="Individual"
-          reg=""
-          description="Digi-Vigyapan is an advertisement making competition. Participants 
-          must create advertisements, which might be in the form of video 
-          advertising, pamphlets, brochures, or posters. The topics will be 
-          announced, and participants need to select their preferred topic. The 
-          participants can even create logos for their brand. The participants will 
-          then present the ad to the jury who would assess their work and declare 
-          the winners. Participation certificates would be given to all participants.
-          "
         />
         <EventComponent
           img={img7}
