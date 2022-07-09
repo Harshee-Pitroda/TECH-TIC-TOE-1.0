@@ -103,7 +103,7 @@ const Footer = () => {
       </LogoContainer>
       <FooterComponent>
         <Title>
-            Contact Us: 9440045717 / 9137093968
+            Contact Us: 9440045717
           </Title>
         <ul click={click}>
           <li onClick={() => scrollTo('home')} >home</li>
